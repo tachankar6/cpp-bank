@@ -12,6 +12,7 @@ class User{
         std::string lastName;
         std::string fullName;
 
+        // can we create a separate class for these two? 
         int PIN;
         float balance;
 
