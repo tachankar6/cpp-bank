@@ -1,12 +1,31 @@
-#ifndef ACCOUNT_HPP
-#define ACCOUNT_HPP
-
 #include <iostream>
+#include "Account.hpp"
 
-//* This class gets the information from User, where PIN and balance will live, hopefully
-class Account {
-    private: 
+Account::Account() {
+    this->pinNum = 0000;
+    this->balance = 00.00;
+}
 
-};
+// can use either or
+/* Account::Account(int pins, float bal): pinNum(pins), balance(bal) {
+}*/
+Account::Account(int pins, float bal) {
+    this->balance = bal;
+    this->pinNum = pins;
+}
 
-#endif
+int Account::getPIN() {
+    return pinNum;
+}
+
+float Account::getBalance() {
+    return balance;
+}
+
+void Account::setPIN(int pin_num) {
+    this->pinNum = pin_num;
+}
+
+void Account::setBalance(float bala) {
+    this->balance = bala;
+}
