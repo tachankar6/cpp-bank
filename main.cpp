@@ -31,7 +31,7 @@ int main() {
 
 void intro() {
     std::cout << "\n\n\t\tWelcome to the Bank of Hector project.\n";
-    std::cout << "\t\tThis program is intended to replicate being a bank teller\n\n\n";
+    std::cout << "\t\tThis program is intended to replicate the role of a bank teller\n\n\n";
 }
 
 

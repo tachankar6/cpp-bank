@@ -5,7 +5,7 @@
 
 // creates a User to hold the values of the read file.
 // TODO: do not want pin and balance to appear here. Create another class for Account details 
-class User{
+class User {
     private:
         std::string accNum;
         std::string firstName;
@@ -31,8 +31,10 @@ class User{
         void setAccNum(std::string);
         void setFN(std::string);
         void setLN(std::string);
-        void setBalance();
-        void setPIN();
+        void setBalance(float);
+        void setPIN(int);
+
+        void setFullName(std::string, std::string);
 
 };
 

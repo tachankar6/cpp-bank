@@ -40,3 +40,30 @@ int User::getPIN() {
 float User::getBalance() {
     return balance;
 }
+
+void User::setAccNum(std::string acc) {
+    this->accNum = acc;
+}
+
+void User::setFN(std::string fName) {
+    this->firstName = fName;
+}
+
+void User::setLN(std::string lName) {
+    this->lastName = lName;
+}
+
+void User::setBalance(float bal) {
+    this->balance = bal;
+}
+
+void User::setPIN(int pin) {
+    this->PIN = pin;
+}
+
+// TODO: may need future work/ bugfix
+void User::setFullName(std::string fname, std::string lname) {
+    this->firstName = fname;
+    this->lastName = lname;
+}
+
