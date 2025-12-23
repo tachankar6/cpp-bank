@@ -31,8 +31,10 @@ class User {
         void setAccNum(std::string);
         void setFN(std::string);
         void setLN(std::string);
-        void setBalance();
-        void setPIN();
+        void setBalance(float);
+        void setPIN(int);
+
+        void setFullName(std::string, std::string);
 
 };
 
