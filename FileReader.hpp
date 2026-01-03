@@ -4,13 +4,13 @@
 #include <iostream>
 #include <fstream>
 
-class File {
+class FileReader {
     private:
         std::string fileName;
 
     public:
-        File();
-        File(std::string filename);
+        FileReader();
+        FileReader(std::string filename);
 };
 
 
