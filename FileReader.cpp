@@ -25,34 +25,26 @@ FileReader::FileReader() {
             User users(account, first, last, pin, balance); // saves the files into a user account
         }
     }
-
+    textFile.close(); //* closing file
 }
 
 // if the user uses the default file that we already have
 FileReader::FileReader(std::string inFileName) {
+    std::string account, first, last, full;
+    int pin, balance;
     std::ifstream textFile(inFileName); 
     // what if the text file was deleted, how do we go upon making a work around
-
-}
-
-
-
-
-
-FileReader::FileReader(std::string fileName) {
-    std::ifstream inputFile(fileName);
-    if(!inputFile) {
+    if(!textFile) {
         std::cout << "Was not able to open file: " << fileName << std::endl;
         return;
     }
-    std::string firstName, lastName, fullName, accNum;
-    int pin;
-    float balance;
-    
-    while(inputFile >> accNum >> firstName >> lastName >> pin >> balance) {
-        fullName = firstName + lastName;
-        User user(accNum, firstName, lastName, pin, balance);
-        userMap[accNum] = user;
+
+    else if(textFile.is_open()) {
+        while(textFile >> account >> first >> last >> pin >> balance) {
+            full = first + " " + last;
+            // adding to the same list of users as the default constructor
+            User user(account, first, last, pin, balance); 
+        }
     }
-    inputFile.close();
+    textFile.close(); //* closing file
 }
