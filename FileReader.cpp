@@ -3,6 +3,7 @@
 #include "FileReader.hpp"
 #include "User.hpp"
 
+// if the user wants to input their own file
 FileReader::FileReader() {
     std::string filename;
     std::string account, first, last;
@@ -21,9 +22,16 @@ FileReader::FileReader() {
     else if (textFile.is_open()) { // condition for file being opened
         while (textFile >> account >> first >> last >> pin >> balance) {
             std::string fullName = first +  " " + last;
-            User users(account, first, last, pin, balance); 
+            User users(account, first, last, pin, balance); // saves the files into a user account
         }
     }
+
+}
+
+// if the user uses the default file that we already have
+FileReader::FileReader(std::string inFileName) {
+    std::ifstream textFile(inFileName); 
+    // what if the text file was deleted, how do we go upon making a work around
 
 }
 
